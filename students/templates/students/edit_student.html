@@ -1,0 +1,15 @@
+{% extends 'students/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <h3 class="mb-4">✏️ Edit Student</h3>
+  <form method="post" class="p-4 bg-light border rounded shadow-sm" style="max-width: 600px;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="d-flex justify-content-between mt-3">
+      <button type="submit" class="btn btn-success">Update</button>
+      <a href="/" class="btn btn-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

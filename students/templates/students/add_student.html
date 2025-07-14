@@ -1,0 +1,9 @@
+{% extends 'students/base.html' %}
+{% block content %}
+<h2 class="mb-4">➕ Add New Student</h2>
+<form method="post" class="p-4 shadow-sm border rounded bg-light">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Save Student</button>
+</form>
+{% endblock %}
